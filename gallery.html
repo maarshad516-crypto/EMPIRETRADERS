@@ -1,119 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gallery | Panel Verse</title>
-
+<title>Gallery | Empire Traders</title>
 <link rel="stylesheet" href="style.css">
-
+<style>
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.gallery-card img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+  display:block;
+}
+.filter-buttons {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
+}
+.filter-buttons button.active { font-weight:bold; }
+@media(max-width:600px) {
+  .gallery-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .gallery-card img { height:190px; }
+}
+</style>
 </head>
-
 <body>
-
 <header>
-
-<div class="logo">
-
-<h2>Panel Verse</h2>
-
-</div>
-
+<div class="logo"><h2>Empire Traders</h2></div>
 <nav>
-
 <a href="index.html">Home</a>
-
 <a href="about.html">About</a>
-
 <a href="services.html">Services</a>
-
 <a href="gallery.html">Gallery</a>
-
+<a href="calculator.html">Calculator</a>
 <a href="contact.html">Contact</a>
-
 </nav>
-
 </header>
 
 <section class="gallery-page">
-
-<h1>Our Projects</h1>
-
-<p>Explore our premium interior work.</p>
+<h1>Our Gallery</h1>
+<p>Explore our projects and materials.</p>
 
 <div class="filter-buttons">
-
-<button class="active">All</button>
-
-<button>PVC</button>
-
-<button>WPC</button>
-
-<button>Fluted</button>
-
-<button>Ceiling</button>
-
+<button class="active" data-filter="all">All</button>
+<button data-filter="wall">Wall Designs</button>
+<button data-filter="ceiling">Ceiling Designs</button>
+<button data-filter="material">Materials</button>
 </div>
 
 <div class="gallery-grid">
-
-<div class="gallery-card">
-
-<img src="images/project1.jpg">
-
-<h3>PVC Wall Panel</h3>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/10.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
 </div>
-
-<div class="gallery-card">
-
-<img src="images/project2.jpg">
-
-<h3>Luxury TV Unit</h3>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/2.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
 </div>
-
-<div class="gallery-card">
-
-<img src="images/project3.jpg">
-
-<h3>Fluted Panel</h3>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/3.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
 </div>
-
-<div class="gallery-card">
-
-<img src="images/project4.jpg">
-
-<h3>False Ceiling</h3>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/4.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
 </div>
-
-<div class="gallery-card">
-
-<img src="images/project5.jpg">
-
-<h3>Bedroom Design</h3>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/5.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
 </div>
-
-<div class="gallery-card">
-
-<img src="images/project6.jpg">
-
-<h3>Office Interior</h3>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/6.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
 </div>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/7.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
 </div>
-
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/8.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
+</div>
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/9.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
+</div>
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/images (1).jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
+</div>
+<div class="gallery-card" data-category="wall">
+  <img src="images/wall/images.jpg" alt="Wall Design" loading="lazy">
+  <h3>Wall Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/1.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/11.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/12.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/2.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/3.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/4.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/5.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/6.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/7.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/8.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="ceiling">
+  <img src="images/ceiling/9.jpg" alt="Ceiling Design" loading="lazy">
+  <h3>Ceiling Design</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (1).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (10).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (11).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (12).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (13).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (14).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (15).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (16).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (17).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (18).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (19).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (2).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (20).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (21).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (22).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (23).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (24).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (25).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (26).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (27).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (28).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (29).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (3).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (4).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (5).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (6).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (7).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (8).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM (9).jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+<div class="gallery-card" data-category="material">
+  <img src="images/material/WhatsApp Image 2026-07-15 at 7.34.17 PM.jpeg" alt="Material" loading="lazy">
+  <h3>Material</h3>
+</div>
+</div>
 </section>
 
-<script src="script.js"></script>
-
+<script>
+document.querySelectorAll('.filter-buttons button').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.filter-buttons button').forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    const filter = button.dataset.filter;
+    document.querySelectorAll('.gallery-card').forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+    });
+  });
+});
+</script>
 </body>
-
 </html>
